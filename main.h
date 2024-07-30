@@ -50,25 +50,25 @@ int process_format_specifier(const char *format_str, int *index,
 		int format_flags, int min_width, int precision, int data_size);
 
 /*For printing numbers*/
-int format_integer(va_list args, char output_buffer[],
+int convertToInt(va_list args, char output_buffer[],
 		int format_flags, int min_width, int precision, int type_size);
 
-int format_binary(va_list args, char output_buffer[],
+int convertToBin(va_list args, char output_buffer[],
 		int format_flags, int min_width, int precision, int type_size);
 
-int format_unsigned(va_list args, char output_buffer[],
+int convertToUnsigned(va_list args, char output_buffer[],
 		int format_flags, int min_width, int precision, int type_size);
 
-int format_octal(va_list args, char output_buffer[],
+int convertToOct(va_list args, char output_buffer[],
 		int format_flags, int min_width, int precision, int type_size);
 
-int format_hexadecimal(va_list args, char output_buffer[],
+int convertToHex(va_list args, char output_buffer[],
 		int format_flags, int min_width, int precision, int type_size);
 
-int format_hex_uppercase(va_list args, char output_buffer[],
+int convertToHexUpper(va_list args, char output_buffer[],
 		int format_flags, int min_width, int precision, int type_size);
 
-int format_hexadecimal_custom(va_list args, char hex_map[],
+int convertToHexCustom(va_list args, char hex_map[],
 		char output_buffer[], int format_flags,
 		char hex_flag, int min_width, int precision, int type_size);
 
@@ -87,11 +87,11 @@ int extract_precision(const char *format_str, int *idx, va_list args);
 int determine_size(const char *format_str, int *idx);
 
 /*Reversing a string*/
-int rev_string(va_list types, char buffer[],
+int revString(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
 /*Print string in ROT13*/
-int format_rot13_string(va_list args, char output_buffer[],
+int rot13String(va_list args, char output_buffer[],
 		int format_flags, int min_width, int max_length, int data_size);
 
 /*Width handler*/
@@ -116,7 +116,7 @@ int format_and_write_unsigned(int is_negative, int index, char output_buffer[],
 int is_character_printable(char character);
 int append_hexadecimal_code(char character, char buffer[], int buffer_idx);
 int is_character_digit(char character);
-long int convert_number_size(long int number, int size_specifier);
-unsigned long int convert_unsigned_sz(unsigned long int n, int size_specifier);
+long int convertNumberSz(long int number, int size_specifier);
+unsigned long int convertUnsignedSz(unsigned long int n, int size_specifier);
 
 #endif
