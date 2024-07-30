@@ -106,7 +106,7 @@ void flush_buffer(char buffer[], int *buffer_index)
  */
 int printInt(int a)
 {
-    char str[12]; // Enough to hold INT_MIN and INT_MAX
+    char str[12];
     int i = 0, is_negative = 0, count = 0;
 
     if (a == 0)
