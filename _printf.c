@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
         if (*format == specifier)
         {
             flush_buffer(buffer, &buffer_index);
-            format++; // move the pointer to the next character
+            format++; 
             flags = parse_format_flags(format, &format);
             width = extract_width(format, &format, args);
             precision = extract_precision(format, &format, args);
@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
             }
             else
             {
-                // Handle unknown specifier or error
+                
                 printStr("Error. The format specifier is not recognized.");
                 return (-1);
             }
