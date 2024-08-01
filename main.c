@@ -1,6 +1,5 @@
-// main.c
 #include <stdio.h>
-#include "main.h"  // Make sure this file declares your _printf function
+#include "main.h"
 
 int main(void)
 {
